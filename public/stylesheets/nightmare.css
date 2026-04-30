@@ -1,0 +1,168 @@
+/* BEGINNING OF FONT INCLUSION */
+@font-face {
+    font-family: 'LoveLetter'; /*a name to be used later*/
+    src: local('LoveLetter'),  /*URL to font*/
+        url('../fonts/LoveLetterWeb.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'meninblue'; /*a name to be used later*/
+    src: local('meninblue'),  /*URL to font*/
+        url('../fonts/MIB.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'Circuit'; /*a name to be used later*/
+    src: local('circuit'),  /*URL to font*/
+        url('../fonts/CIRCUIT.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'meninblue'; /*a name to be used later*/
+    src: local('meninblue'),  /*URL to font*/
+        url('../fonts/MIB.ttf#font') format('truetype');
+}
+
+/* END OF FONT INCLUSION */
+
+/* Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {width: 12px;}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(128,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb:window-inactive {background: rgba(128,0,0,0.4);}
+/* END OF CUSTOM SCROLLBAR */
+
+body{
+  background-color:black;
+  background-image:URL('../img/Untitled-1.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment:fixed;
+  padding:0px;
+  cursor:url("../cur/Lain_Normal.png"), default;}
+
+.tab{
+    position:relative;
+    display:table;
+    margin:auto;
+    border-style:outset;
+    border-width:10px;
+    border-color:gray;
+    border-top-width:0px;
+    margin-top:-2px;
+    width:100px;
+    background-color:#363636;}
+
+#return{ cursor:url("../cur/Lain_Link.png"), pointer; }
+
+.scissors{
+  position:fixed;
+  max-width:100px;
+  max-height:100px;
+  top:40%;
+  margin:10px;
+  z-index:11;}
+
+#bell{
+    margin: auto;
+    max-width:200px;
+    max-height:200px;
+    display:table;}
+
+#linkcontainer{
+  margin: 0 auto;
+  max-width:100%;
+  margin:0px;
+  margin-bottom:0px;
+  background-color:black;
+  border-style:outset;
+  border-color:#919191;
+  border-width:10px;
+  padding:1px;
+  display: flex;
+    margin-right: auto;
+    margin-left: auto;}
+
+.linkrow{text-decoration:none;display: flex;}
+
+.layerlink{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#800000;
+    text-align:center;
+    border-style:solid;
+    border-color: #800000;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;}
+.layerlink:hover {border-color:#4D0000;color:#FFFF00; cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.layerlink0{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#FFFF00;
+    background-color:black;
+    text-align:center;
+    border-style:solid;
+    border-color:black;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;}
+.layerlink0:hover {background-color:black; color:#FFFF00; cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.prvw{
+    border-style:solid; 
+    border-color:#800000;
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#800000;
+    text-align:center;
+    overflow:hidden;
+    width:7em;
+    margin:1px;
+    padding:2px;
+    min-width:10px;
+    display: flex;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;}
+.prvw:hover {border-color:#4D0000;color:#FFFF00; cursor:url("../cur/Lain_Link.png"), pointer;}

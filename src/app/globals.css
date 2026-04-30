@@ -1,49 +1,59 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* BEGINNING OF FONT INCLUSION */
+@font-face {
+  font-family: "LoveLetter";
+  src: local("LoveLetter"),
+    url("/fonts/LoveLetterWeb.ttf") format("truetype");
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "liquidcrystal";
+  src: local("liquidcrystal"),
+    url("/fonts/LiquidCrystal-Normal.ttf") format("truetype");
 }
-
-html {
-  height: 100%;
+@font-face {
+  font-family: "chintzy";
+  src: local("chintzy"),
+    url("/fonts/chintzy.ttf") format("truetype");
 }
+/* END OF FONT INCLUSION */
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* Universal reset (applied site-wide) */
 * {
-  box-sizing: border-box;
-  padding: 0;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar (applied site-wide) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(0, 255, 0, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 255, 0, 0.4);
+}
+
+body {
+  background-color: black;
+  min-height: 100vh;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

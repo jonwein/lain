@@ -1,0 +1,210 @@
+/* BEGINNING OF FONT INCLUSION */
+@font-face {
+    font-family: 'LoveLetter'; /*a name to be used later*/
+    src: local('LoveLetter'),  /*URL to font*/
+        url('../fonts/LoveLetterWeb.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'liquidcrystal'; /*a name to be used later*/
+    src: local('liquidcrystal'),  /*URL to font*/
+        url('../fonts/LiquidCrystal-Normal.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'chintzy'; /*a name to be used later*/
+    src: local('chintzy'),  /*URL to font*/
+        url('../fonts/chintzy.ttf#font') format('truetype');
+}
+/* END OF FONT INCLUSION */
+
+/* Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Universal identifier */
+
+/* CUSTOM SCROLLBAR */
+/* Let's get this party started */
+::-webkit-scrollbar {width: 12px;}
+/* Track */
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius: 10px;border-radius: 10px;background:black;}
+/* Handle */
+::-webkit-scrollbar-thumb {-webkit-border-radius: 10px; border-radius: 10px; background: #999900;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb:window-inactive {background: black;}
+/* END OF CUSTOM SCROLLBAR */
+
+/*CSS */
+html,body{
+  position:relative;
+  margin:0; 
+  padding:0;
+  height:100%;
+  width:100%;
+  min-height:100%;
+  min-width:100%;
+  cursor:url("../cur/Lain_Normal.png"), default;}
+
+#bg-video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background: black;
+}
+
+a:link {color:red;text-decoration:none;}      /* unvisited link */
+a:visited {text-decoration:none;}  /* visited link */
+a:hover {text-decoration:none;}  /* mouse over link */
+a:active {color:red; text-decoration:none;}  /* selected link */
+
+.topic{color:#CF0000;}
+
+#follower{pointer-events:none;
+  animation: borders 2s reverse infinite;
+  -webkit-animation: borders 2s reverse infinite;}
+#followin{
+  animation: borders 2s normal infinite;
+  -webkit-animation: borders 2s normal infinite;}
+  @-webkit-keyframes borders {0% { border-color:red; } 100%{ border-color:blue;}}
+  @-moz-keyframes borders {0% { border-color:red; } 100%{ border-color:blue;}}
+  
+.clickme{
+    cursor:url("../cur/Lain_Normal.png"), default;
+    font-size:4em;
+    z-index:1;
+    position:absolute;
+    color:#CF0000;
+    font-family:LoveLetter;
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;}
+.clickme + .clickme{
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;}
+.clickme + .clickme + .clickme{
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;}
+.clickme + .clickme + .clickme + .clickme{
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;}
+.clickme + .clickme + .clickme + .clickme + .clickme{
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s;}
+.clickme + .clickme + .clickme + .clickme + .clickme + .clickme{
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;}
+.clickme + .clickme + .clickme + .clickme + .clickme + .clickme + .clickme{
+    animation: colors 2s reverse infinite;
+    -webkit-animation: colors 2s reverse infinite;
+    animation-delay: 3.5s;
+    -webkit-animation-delay: 3.5s;}
+@-webkit-keyframes colors {25% {color:#CF0000;} 50% {color:blue;}75% {color:white;} 100%{ color:black;}}
+@-moz-keyframes colors {25% {color:#CF0000;} 50% {color:blue;}75% {color:white;} 100%{ color:black;}}
+
+#together{
+  cursor:url("../cur/Lain_Link.png"), pointer;
+  animation: tog 2s reverse infinite;
+  -webkit-animation: tog 2s reverse infinite;
+}
+  @-webkit-keyframes tog {1% {color:red;} 33%{color:blue;} 99%{color:white;} }
+
+#linkcontainer{
+    z-index:9;
+    margin:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    background-color:black;
+    border-style:solid;
+    border-color:#313131;
+    border-width:5px;
+    width:auto;
+    padding:2px;
+    display: flex;}
+.linkrow{ text-decoration:none; display: flex;}
+
+.layerlink{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#999900;
+    background-color:#313131;
+    text-align:center;
+    border-style:solid;
+    border-color:#1A1A1A;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;}
+.layerlink:hover {border-style:solid; border-color:#313131; background-color:black; color:#FFEF00; text-decoration:none; cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.layerlink0{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#999900;
+    background-color:black;
+    text-align:center;
+    border-style:solid;
+    border-color:black;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;}
+.layerlink0:hover {border-style:solid; border-color:black; background-color:black; color:#999900; text-decoration:none; cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.prvw{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#999900;
+    background-color:#313131;
+    text-align:center;
+    border-style:solid;
+    border-color:#1A1A1A;
+    overflow:hidden;
+    width:7em;
+    margin:1px;
+    padding:2px;
+    min-width:10px;
+    display: flex;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+    display: flex;}
+.prvw:hover {border-style:solid; border-color:#313131; background-color:black; color:#FFEF00; text-decoration:none;  cursor:url("../cur/Lain_Link.png"), pointer;}

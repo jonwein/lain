@@ -1,0 +1,142 @@
+/* Start of Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    /*
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/}
+    
+/* End of Universal identifier */
+
+/* Start of contents CSS */
+body{
+    position:relative;
+    background-image: URL("../img/gridbg.png");
+    background-repeat: no-repeat;
+    /* CUSTOM CURSOR CODE */
+    cursor: url("../cur/Lain_Normal.png"), default;
+
+background: rgb(255,99,236); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,99,236,1) 0%, rgba(204,0,197,1) 31%, rgba(131,25,158,1) 49%, rgba(0,242,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,99,236,1)), color-stop(31%,rgba(204,0,197,1)), color-stop(49%,rgba(131,25,158,1)), color-stop(100%,rgba(0,242,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,99,236,1) 0%,rgba(204,0,197,1) 31%,rgba(131,25,158,1) 49%,rgba(0,242,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,99,236,1) 0%,rgba(204,0,197,1) 31%,rgba(131,25,158,1) 49%,rgba(0,242,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,99,236,1) 0%,rgba(204,0,197,1) 31%,rgba(131,25,158,1) 49%,rgba(0,242,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,99,236,1) 0%,rgba(204,0,197,1) 31%,rgba(131,25,158,1) 49%,rgba(0,242,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff63ec', endColorstr='#00f2ff',GradientType=0 ); /* IE6-9 */
+
+}
+
+/* Start of primary content css*/
+
+#under{
+    margin-top:2%;
+    margin-left:10%;
+    margin-right:10%;}
+
+h1 {font-family:sans-serif;text-align:left;color:White;background-color:#000080;
+    border-style:outset; border-width:10px;;margin:0px;padding:10px;border-color:#bfb8bf;}
+
+h3 {font-family:sans-serif;text-align:left;color:White;background-color:#000080;margin:0px;padding:10px;margin-bottom:5px;}
+
+.sborder, .sborderd{border:solid 1px black; margin-top:1%; margin-bottom:1%;border-top-color:white;border-left-color:white;}
+.rule{border:inset 2px #bfb8bf;}
+
+.main{background-color:#bfb8bf;font-family: sans-serif;background-color:#bfb8bf;border-style:outset;border-color:#bfb8bf;border-width:10px;}
+
+.menu{color:black;font-weight:bold;padding-left:15px;cursor: url("../cur/Lain_Link.png"), pointer;}
+#feed{}
+
+#linkcontainer{
+    z-index:99999;
+    position:fixed;
+    width:100%;
+    bottom:0px;
+    left:0px;
+    margin-right:50px;
+    background-color:#bfb8bf;
+    border-style:inset;
+    border-color:#bfb8bf;
+    border-width:5px;
+    border-top-color:white;
+    border-left-width:0px;
+    border-right-width:0px;
+    padding:2px;
+    display: flex;}
+.linkrow{text-decoration:none;display: flex;}
+
+.layerlink{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#bfb8bf;
+    text-align:center;
+    border-style:outset;
+    border-color:gray;
+    border-top-color:white;
+    border-left-color:white;
+    border-radius:3px;
+    box-shadow: inset -10px -10px 100px -50px rgba(0,0,0,0.75);
+    overflow:hidden;
+    
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+}
+.layerlink:hover {box-shadow: inset 0px 0px 30px 0px rgba(0,255,255,1);border-style:solid; border-color:cyan; color:hotpink; cursor: url("../cur/Lain_Link.png"), default;}
+
+.layerlink0{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:white;
+    background-color:black;
+    text-align:center;
+    border-style:solid;
+    border-color:black;
+    overflow:hidden;
+    
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+}
+.layerlink0:hover {border-style:solid;border-color:black; background-color:black; color:hotpink; cursor: url("../cur/Lain_Link.png"), pointer;}
+/* End of primary content css*/
+
+#vw{
+    position:relative; height:270px; width:336px;
+}
+
+@media screen and (max-width: 1400px) {
+    .layerlink{padding:2px;font-size:0.8em;} 
+    .layerlink0{padding:2px;font-size:0.8em;} 
+    .prvw{padding:2px;font-size:0.8em;} 
+}
+@media screen and (max-width: 1000px) {
+    .layerlink{padding:2px;font-size:0.6em;background-image: none;} 
+    .layerlink0{padding:2px;font-size:0.6em;} 
+    .prvw{padding:2px;font-size:0.6em;background-image: none;} 
+}
+@media screen and (max-width: 800px) {
+    .layerlink{padding:2px;font-size:0.4em;background-image: none;} 
+    .layerlink0{padding:2px;font-size:0.4em;} 
+    .prvw{padding:2px;font-size:0.4em;background-image: none;} 
+}

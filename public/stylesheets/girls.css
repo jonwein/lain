@@ -1,0 +1,243 @@
+/* BEGINNING OF FONT INCLUSION */
+@font-face {
+    font-family: 'LoveLetter'; /*a name to be used later*/
+    src: local('LoveLetter'),  /*URL to font*/
+        url('../fonts/LoveLetterWeb.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'liquidcrystal'; /*a name to be used later*/
+    src: local('liquidcrystal'),  /*URL to font*/
+        url('../fonts/LiquidCrystal-Normal.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'chintzy'; /*a name to be used later*/
+    src: local('chintzy'),  /*URL to font*/
+        url('../fonts/chintzy.ttf#font') format('truetype');
+}
+/* END OF FONT INCLUSION */
+
+/* Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+/* Universal identifier */
+
+/* CUSTOM SCROLLBAR */
+/* Let's get this party started */
+::-webkit-scrollbar {width: 12px;}
+/* Track */
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0);-webkit-border-radius: 10px;border-radius: 10px;}
+/* Handle */
+::-webkit-scrollbar-thumb {-webkit-border-radius: 10px;border-radius: 10px;background: #E62EB8;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb:window-inactive { background: #E62EB8; }
+/* END OF CUSTOM SCROLLBAR */
+
+
+body{
+  background-color:black;
+  padding:0px;
+  /* CUSTOM CURSOR CODE */
+  cursor:url("../cur/Lain_Normal.png"), default;
+    animation: pulse 0.2s alternate infinite;
+   -webkit-animation: pulse 0.2s alternate infinite;
+}
+  @-webkit-keyframes pulse {
+  0% { background-color:black;}
+  100% {background-color:#9933FF;} }
+  @-moz-keyframes pulse {
+  0% { background-color:black;}
+  100% {background-color:#9933FF;} }
+  
+a:link {color:black;text-decoration:none;}      /* unvisited link */
+a:visited {color:black;text-decoration:none;}  /* visited link */
+a:hover {color:black;text-decoration:none;}  /* mouse over link */
+a:active {color:black;text-decoration:none;}  /* selected link */
+
+.lcScroll{ position:fixed !important; top:0px !important;}
+
+#header{
+    position: relative;
+    display:inline-block;
+    background-color:black;
+    border-style:solid;
+    border-color:#771860;
+    border-width:5px;
+    color:#9933FF;
+    font-family:LoveLetter;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size:2em;
+    left: 320px;
+    text-shadow:4px 0px #0000A3;
+    height: 25px;
+    text-align: center;}
+
+#return{    
+    position:absolute;
+    background-color:black;
+    border-style:solid;
+    border-color:#E62EB8;
+    border-width:5px;
+    color:white;
+    font-family:LoveLetter;
+    right: 1%;
+    top:0px;
+    height: 25px;
+    padding:2px;  
+    color:white;
+    cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.default{
+    background-color:black;
+    margin-left: 320px;
+    margin-right:1%;
+    border-style:inset;
+    border-color:#E62EB8;
+    border-width:10px;}
+.definner{
+border-style:outset;
+border-color:#E62EB8;
+box-shadow: inset 0px 0px 20px #CC00CC;
+border-width:15px;
+background-color:#F505FF;
+color:black;    
+font-family:LoveLetter;
+padding:10px;}
+
+.girl{
+    position: relative;
+    border-style:solid;
+    border-width:5px;
+    border-color:#771860;
+    background-color:black;
+    color:#9933FF;
+    margin-top:2px;
+    text-shadow:2px 0px #0000A3;
+    cursor: pointer;}
+
+.images{
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:0px;
+  margin-bottom: 0px;}
+
+hr{
+    margin-top:10px;
+    margin-bottom:10px;
+    color:black;
+    background-color:black;
+    height: 5px;
+    border-color:black;}
+
+#linkcontainer{
+    margin:0px;
+    margin-top:0px;
+    margin-bottom:10px;
+    background-color:#E62EB8;
+    border-style:solid;
+    border-color:#E62EB8;
+    border-width:2px;
+    padding:2px;
+    display: flex;}
+
+.linkrow{display: flex;}
+
+.layerlink{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#E62EB8;
+    text-align:center;
+    border-style:solid;
+    border-color:#E62EB8;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;}
+.layerlink:hover {border-style:solid; border-color:red; background-color:black;background-image:URL('../img/kiss.png');
+background-size:70px 30px;background-repeat:no-repeat;background-position:98% 98%; 
+color:white; text-decoration:none;  cursor:url("../cur/Lain_Link.png"), pointer;}
+
+
+.layerlink0{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#9933FF;
+    background-color:black;
+    text-align:center;
+    border-style:solid;
+    border-color:black;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+       -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;}
+.layerlink0:hover {border-style:solid; border-color:black; background-color:black; color:white; text-decoration:none;  cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.prvw{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#E62EB8;
+    text-align:center;
+    border-style:solid;
+    border-color:#E62EB8;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    width:7em;
+    margin:1px;
+    padding:2px;
+    min-width:10px;
+    display: flex;
+    align-items: center;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;}
+.prvw:hover {border-style:solid; border-color:red; background-color:black;background-image:URL('../img/kiss.png');
+background-size:70px 30px;background-repeat:no-repeat;background-position:98% 98%; 
+color:white; text-decoration:none;  cursor:url("../cur/Lain_Link.png"), pointer;}
+
+@media screen and (max-width: 1400px) {
+    .layerlink{padding:2px;font-size:0.8em;} 
+    .layerlink0{padding:2px;font-size:0.8em;} 
+    .prvw{padding:2px;font-size:0.8em;} 
+}
+@media screen and (max-width: 1000px) {
+    .layerlink{padding:2px;font-size:0.6em;} 
+    .layerlink0{padding:2px;font-size:0.6em;} 
+    .prvw{padding:2px;font-size:0.6em;} 
+}
+@media screen and (max-width: 800px) {
+    .layerlink{padding:2px;font-size:0.4em;} 
+    .layerlink0{padding:2px;font-size:0.4em;} 
+    .prvw{padding:2px;font-size:0.4em;} 
+}

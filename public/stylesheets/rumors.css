@@ -1,0 +1,156 @@
+/* BEGINNING OF FONT INCLUSION */
+@font-face {
+    font-family: 'LoveLetter'; /*a name to be used later*/
+    src: local('LoveLetter'),  /*URL to font*/
+         url('../fonts/LoveLetterWeb.ttf#font') format('truetype');}
+@font-face {
+    font-family: 'liquidcrystal'; /*a name to be used later*/
+    src: local('liquidcrystal'),  /*URL to font*/
+         url('../fonts/LiquidCrystal-Normal.ttf#font') format('truetype');}
+/* END OF FONT INCLUSION */
+
+/* Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+/* Universal identifier */
+
+::-webkit-scrollbar{width: 12px;}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;}
+/* Handle */
+::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: red; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb:window-inactive {background: red;}
+/* END OF CUSTOM SCROLLBAR */
+
+body{
+  background-color:black;
+  background-image:URL('../img/rumorsbg2.png');
+  background-attachment:fixed;
+  padding-left:200px;
+  padding-right:0px;
+  padding-top:0px;
+  padding-bottom: 0px;
+  /* CUSTOM CURSOR CODE */
+  cursor:url("../cur/Lain_Normal.png"), default;}
+
+#return{
+    font-family:LoveLetter;
+    position:fixed;
+    text-align:center;
+    z-index:11;
+    margin-left:165px;
+    top:30px;
+    right:0px;
+    width:25%;
+    color:red;
+    border-color:white;
+    background-color:white;
+    border-bottom-style:outset;
+    border-bottom-width:10px;
+    border-left-style:solid;
+    border-left-color:white;
+    border-left-width:10px;
+    border-bottom-left-radius:50px;
+    cursor:url("../cur/Lain_Link.png"), default;}
+
+.linkbox{
+  box-shadow: 10px 10px 25px black;
+  padding:10px;
+  margin:20px;
+  float:left;
+  background-color:white;
+  color:black;
+  font-family:LoveLetter;
+  border-style:outset;
+  border-width:10px;
+  border-color:white;}
+
+.linkbox:hover{
+    z-index:9;  
+    cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.linkbox h3{ color:red; }
+
+.linkbox img{
+    display: block;
+    width:  150px;
+    height: auto;
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-left: auto;
+    margin-right: auto;}
+
+#linkcontainer{
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:stretch;
+    align-content:center;
+    z-index:12;
+    border:outset 10px white;
+    border-left-style:solid;
+    border-width:10px;border-bottom-width:0px;border-top-width:0px;
+    background-color:red;
+    min-width:100px;
+    left:0px;
+    height:100%;}
+
+.layerlink{
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    min-height:20px;
+    flex: 1 1;
+    font-family:'LoveLetter';
+    color:red;
+    border: solid white 2px;
+    background-color:white;
+    text-align:center;
+    padding:5px;
+    margin:1px;
+    min-width:100px;
+   overflow:hidden;
+       -webkit-transition: all 1s linear;
+      -moz-transition: all 1s linear;
+      -ms-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      transition: all 1s linear;}
+.layerlink:hover {border-style:solid;border-color:red;background-color:black;color:white;cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.layerlink0{
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    min-height:20px;
+    flex: 1 1;
+    font-family:'LoveLetter';
+    border: solid black 2px;
+    color:red;
+    background-color:black;
+    text-align:center;
+    padding:5px;
+    margin:1px;
+    min-width:100px;
+    overflow:hidden;
+       -webkit-transition: all 1s linear;
+       -moz-transition: all 1s linear;
+       -ms-transition: all 1s linear;
+       -o-transition: all 1s linear;
+       transition: all 1s linear;}
+.layerlink0:hover {cursor:url("../cur/Lain_Link.png"), pointer;}

@@ -1,66 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { useEffect, useState } from "react";
+import MainPanel from "@/components/MainPanel";
+import AdminPanel from "@/components/AdminPanel";
 
 export default function Home() {
+  const [tab, setTab] = useState<"main" | "admin">("main");
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => e.preventDefault();
+    document.addEventListener("contextmenu", handler);
+    return () => document.removeEventListener("contextmenu", handler);
+  }, []);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <link rel="stylesheet" href="/stylesheets/mebious.css" />
+      <audio autoPlay loop>
+        <source src="/audio/boon.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div style={{ position: "relative" }}>
+        <p className="contact">Contact: LainIsMaiWaifu@yahoo.co.jp</p>
+        <img alt="Glider" id="glider" src="/img/glidergreen.png" />
+      </div>
+
+      <div style={{ position: "relative" }}>
+        <div className="tabs">
+          <p
+            className={`taba maintab ${tab === "main" ? "active" : ""}`}
+            onMouseDown={() => setTab("main")}
+          >
+            Main
+          </p>
+          <p
+            className={`taba admintab ${tab === "admin" ? "active" : ""}`}
+            onMouseDown={() => setTab("admin")}
+          >
+            Admin
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="tab-content">
+          {tab === "main" ? <MainPanel /> : <AdminPanel />}
         </div>
-      </main>
-    </div>
+      </div>
+
+      <div className="counter-fixed">
+        <img
+          alt="Hit counter"
+          draggable={false}
+          src="http://cc.amazingcounters.com/counter.php?i=3141905&c=9426028"
+        />
+      </div>
+
+      <div className="navi-fixed">
+        <a draggable={false} href="http://www.tachibanalabs.net">
+          <img
+            draggable={false}
+            src="/img/powernavi-badge.jpg"
+            title="Copland OS is a trademarked product of Tachibana Labs"
+          />
+        </a>
+      </div>
+    </>
   );
 }

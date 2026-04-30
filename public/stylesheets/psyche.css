@@ -1,0 +1,299 @@
+/* BEGINNING OF FONT INCLUSION */
+@font-face {
+    font-family: 'LoveLetter'; /*a name to be used later*/
+    src: local('LoveLetter'),  /*URL to font*/
+        url('../fonts/LoveLetterWeb.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'liquidcrystal'; /*a name to be used later*/
+    src: local('liquidcrystal'),  /*URL to font*/
+        url('../fonts/LiquidCrystal-Normal.ttf#font') format('truetype');
+}
+@font-face {
+    font-family: 'chintzy'; /*a name to be used later*/
+    src: local('chintzy'),  /*URL to font*/
+        url('../fonts/chintzy.ttf#font') format('truetype');
+}
+/* END OF FONT INCLUSION */
+
+
+/* Universal identifier */
+*{
+    -webkit-font-smoothing: antialiased;
+    margin:0; 
+    padding:0; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+/* Universal identifier */
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar { width: 12px;}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: blue; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}
+::-webkit-scrollbar-thumb:window-inactive { background: blue; }
+/* END OF CUSTOM SCROLLBAR */
+
+
+body{
+  background-image:URL('../img/bluscan3.png');
+  background-color:black;
+  padding:0%;
+  /* CUSTOM CURSOR CODE */
+  cursor:url("../cur/Lain_Normal.png"), default;
+}
+
+#leftcolumn{
+    position:absolute;;
+    background-color:black;
+    color:black;
+    border-style:outset;
+    border-right-width:15px;
+    border-top-width:15px;
+    border-bottom-width: 15px;
+    border-left-width:0px;
+    border-color:#000099;
+    width: 350px;
+    top:100px;
+    left:0px;
+    padding:5px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    z-index: 1;}
+
+
+.lcScroll{
+    position:fixed !important;
+    top:0px !important;
+}
+
+#topicselection{
+    white-space:nowrap;
+    display:block;
+    background-color:#000099;
+    border-style:inset;
+    border-width:10px;
+    padding:5px;
+    border-color:#000099;
+    color:black;   
+    font-family:LoveLetter;
+    text-align:left;}
+
+#psyche{  
+  display:inline-block;
+  background-color:black;
+  border-style:solid;
+  border-color:#000099;
+  border-width:5px;
+  color:blue;
+  font-family:LoveLetter;
+  padding:5px;
+  margin-left:0%;
+  margin-top:1%;
+  margin-right:1%;
+  margin-bottom:0%;}
+
+#return{
+    display:inline-block;
+    float:right;
+    margin-top:1%;
+    background-color:black;
+    border-style:solid;
+    border-color:#000099;
+    border-width:5px;
+    color:white;
+    font-family:LoveLetter;
+    margin-right:1%;
+    margin-left:1%;
+    padding:5px;
+    border-radius:30px;  }
+  
+  #default{
+    background-color:black;
+    margin:1%;
+    margin-left:0%;
+    right:0px;    
+    color:blue;
+    border-style:inset;
+    border-color:#000099;
+    border-width:10px;
+    padding:2%;  }
+  
+  .topic{display:block;postion:absolute;margin-left:70%;
+      background-color:blue;border-style:outset;border-color:#000099;border-width:10px;text-align:center;
+      border-top-right-radius:50px;border-top-left-radius:50px;color:black;font-family:Chintzy;}
+  
+/* JPlaylister styling */
+#wrapper {color:blue; margin:0px;}
+ol { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: blue; width: 100%; border-top: 0px solid blue; font-size: 0.9em; }
+ol li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid blue; cursor: pointer; }
+ol li a { display: block; padding: 0px 0px 0px 20px; }
+li.playing { color: white; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
+li.playing a { color: white; }
+li.playing:after { content: '♬'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute;
+        left: 0px; top: 9px; color: white; font-size: 13px; text-shadow: 1px 1px 0px blue; }
+
+a:link {color:white;text-decoration:none;}      /* unvisited link */
+a:visited {color: white;text-decoration:none;}  /* visited link */
+a:hover {color:white;text-decoration:none;}  /* mouse over link */
+a:active {color:red;text-decoration:none;}  /* selected link */
+
+.link{
+line-height:30px;
+font-family:monospace;
+text-shadow: 2px 2px blue;
+color:white;
+margin:0px;
+text-align:center;
+border-style:solid;
+border-color:blue;
+border-width:1px;}
+
+ul > p {
+background-color:#00003A;
+text-shadow: 1px 1px black;
+width:100%;
+padding:2px;}
+
+.selection{
+border-style:solid;
+border-left-width:1px;
+border-right-width:1px;
+border-top-width:0px;
+border-bottom-width:0px;
+border-color:black;
+margin:2px;
+cursor:pointer;
+padding:2px;}
+
+#topb, #bottomb{
+border-color:black;
+margin:2px;
+cursor:pointer;
+padding:2px;
+}
+.selection:hover{ color:white; }
+.selection:hover:after{ content: ' •'; }
+.selection:hover:before{ content: '• '; }
+#topb:hover{ color:white; }
+#bottomb:hover{ color:white; }
+#topb:hover:before{ content: '• '; }
+#topb:hover:after{ content: ' •'; }
+#bottomb:hover:before{ content: '• '; }
+#bottomb:hover:after{ content: ' •'; }
+
+hr{
+margin-top:10px;
+margin-bottom:10px;
+color:black;
+background-color:black;
+height: 5px;
+border-color:blue;
+border-width:2px;}
+
+#linkcontainer{
+  margin:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+  background-color:black;
+  border-style:solid;
+  border-color:#0000CC;
+  border-width:2px;
+  padding:2px;
+  display: flex;}
+.linkrow{
+    text-decoration:none;
+    display: flex;}
+
+.layerlink{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#000099;
+    text-align:center;
+    border-style:solid;
+    border-color:#000099;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;}
+.layerlink:hover {border-style:solid;border-color:#000099;background-color:black;color:blue;text-decoration:none;cursor:url("../cur/Lain_Link.png"), pointer;}
+
+
+.layerlink0{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:#000099;
+    background-color:black;
+    text-align:center;
+    border-style:solid;
+    border-color:black;
+    overflow:hidden;
+    padding:2px;
+    margin:1px;
+    min-width:10px;
+    flex: 1 1;
+    align-items: center;
+       -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;}
+.layerlink0:hover {border-style:solid;border-color:black;background-color:black;color:#000099;text-decoration:none;cursor:url("../cur/Lain_Link.png"), pointer;}
+
+.prvw{
+    font-family:'LoveLetter';
+    text-decoration:none;
+    color:black;
+    background-color:#000099;
+    text-align:center;
+    border-style:solid;
+    border-color:#000099;
+    overflow:hidden;
+    width:7em;
+    margin:1px;
+    padding:2px;
+    min-width:10px;
+    display: flex;
+    align-items: center;
+           -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear;
+            -ms-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            transition: all 1s linear;}
+.prvw:hover {border-style:solid; border-color:#000099;background-color:black;color:blue;text-decoration:none;cursor:url("../cur/Lain_Link.png"), pointer;}
+
+@media screen and (max-width: 1400px) {
+    .layerlink{padding:2px;font-size:0.8em;} 
+    .layerlink0{padding:2px;font-size:0.8em;} 
+    .prvw{padding:2px;font-size:0.8em;} 
+}
+@media screen and (max-width: 1000px) {
+    .layerlink{padding:2px;font-size:0.6em;} 
+    .layerlink0{padding:2px;font-size:0.6em;} 
+    .prvw{padding:2px;font-size:0.6em;} 
+}
+@media screen and (max-width: 800px) {
+    .layerlink{padding:2px;font-size:0.4em;} 
+    .layerlink0{padding:2px;font-size:0.4em;} 
+    .prvw{padding:2px;font-size:0.4em;} 
+}
