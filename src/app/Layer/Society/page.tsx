@@ -26,16 +26,6 @@ export default function SocietyPage() {
     if (href) window.location.href = href;
   };
   const renderCell = (l: (typeof ALL_LAYERS)[number]) => {
-    if (l.disabled) {
-      return (
-        <div key={l.num} className="layerlink">
-          <p>
-            {l.num}:<br />
-            &nbsp;&nbsp;{l.label}&nbsp;&nbsp;
-          </p>
-        </div>
-      );
-    }
     const current = l.href === "/Layer/Society";
     return (
       <div

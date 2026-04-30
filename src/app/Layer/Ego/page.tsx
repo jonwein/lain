@@ -39,7 +39,7 @@ export default function EgoPage() {
         {ROW1.map((l) => (
           <div
             key={l.num}
-            onClick={l.disabled ? undefined : goto(l.href)}
+            onClick={goto(l.href)}
             className="layerlink"
           >
             <p>
